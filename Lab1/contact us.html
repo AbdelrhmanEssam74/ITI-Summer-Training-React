@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact US ITI</title>
+    <style>
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical
+        }
+
+        input[type='color'] {
+            width: 100px;
+            height: 50px;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form>
+        <div>
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" pattern="[a-zA-z]{3,}" name="firstname" placeholder="Your name..">
+        </div>
+        <div>
+            <label for="Eamil">Eamil</label>
+            <input type="email" id="Eamil" name="firstname" placeholder="Your email..">
+        </div>
+        <div>
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+        <div>
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+        </div>
+        <div>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+        <div>
+            <label for="birthdaytime">Birthday (date and time):</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+        </div>
+        <div>
+            <label for="birthdaytime">Alarm</label>
+            <input type="time" id="time" name="time">
+        </div>
+        <div>
+            <label for="bdaymonth">Birthday (month and year):</label>
+            <input type="month" id="bdaymonth" name="bdaymonth">
+        </div>
+        <div>
+            <label for="week">Select a week:</label>
+            <input type="week" id="week" name="week">
+        </div>
+        <div>
+            <label for="color">Choose your fav color from the list:</label>
+            <input list="colos" name="color" id="color">
+
+            <datalist id="colos">
+                <option value="red">
+                <option value="blue">
+                <option value="green">
+                <option value="black">
+            </datalist>
+        </div>
+        <div>
+            <label for="age">Quantity (between 1 and 5):</label>
+            <input type="number" id="age" name="age" min="18" max="60">
+        </div>
+        <div>
+            <label for="level">Levels (between 0 and 10):</label>
+            <input type="range" id="level" name="level" min="0" max="10">
+        </div>
+        <div>
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search">
+        </div>
+        <div>
+            <label for="phone">phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        </div>
+        <div>
+            <label for="website">Add your website:</label>
+            <input type="url" id="website" name="website">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

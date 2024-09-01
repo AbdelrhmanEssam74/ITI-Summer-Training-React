@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home-ITI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, nav, section, article, aside, footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Grid System */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* 1 column for sidebar, 3 columns for content */
+            grid-template-rows: auto;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "section aside"
+                "article aside"
+                "footer footer";
+            height: 100vh;
+            gap: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background: #333;
+            color: white;
+        }
+
+        nav {
+            grid-area: nav;
+            background: #444;
+            color: white;
+        }
+
+        section {
+            grid-area: section;
+            background: #f4f4f4;
+        }
+
+        article {
+            grid-area: article;
+            background: #ccc;
+        }
+
+        aside {
+            grid-area: aside;
+            background: #ddd;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+        }
+        }
+    </style>
+</head>
+
+<body>
+<div class="grid-container">
+    <header>Header</header>
+    <nav>Nav</nav>
+    <section>Section</section>
+    <article>Article</article>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+</div>
+</body>
+</html>
