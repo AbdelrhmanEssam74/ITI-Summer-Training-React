@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <title>Lab2-3</title>
+    <style>
+        .Curved {
+            width: 200px;
+            height: 100px;
+            background-color: #eee;
+            text-align: center;
+            border: 2px solid red;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        @font-face {
+            font-family: "Roboto";
+            src: url(Roboto-Regular.ttf);
+        }
+
+        .custom-font {
+            font-family: "Roboto", serif;
+        }
+
+        .columns {
+            column-count: 3;
+            column-gap: 50px;
+        }
+
+        .vertical {
+            transform: translateY(30%) translateX(50%) rotate(90deg);
+            background: #04AA6D;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .ball {
+            margin: 20px;
+            width: 100px;
+            transition: 0.3s ease-in;
+        }
+
+        .ball:hover {
+            transform: rotate(90deg) scale(1.5);
+        }
+
+        .earth {
+            position: absolute;
+            top: 65%;
+            right: 15%;
+            margin: 25px;
+            width: 100px;
+            animation: rotate 5s infinite;
+        }
+
+        @keyframes rotate {
+            50% {
+                transform: translateX(50%) rotate(180deg) scale(1.5);
+            }
+            100% {
+                transform: translateX(100%) rotate(360deg) scale(2);
+            }
+        }
+
+        .tiger-image {
+            width: 150px;
+            transition: transform 0.5s;
+        }
+
+        .tiger-image:hover {
+            transform: rotateY(180deg) translateX(-300px);
+
+        }
+
+        .tiger-image2 {
+            width: 150px;
+            animation: tigerAnimation 6s infinite;
+        }
+
+        @keyframes tigerAnimation {
+            50% {
+                transform: rotateY(180deg) translateX(-300px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+<!--Make a div with Curved borders-->
+<div class="Curved">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur cumque eum, harum incidunt itaque
+</div>
+<!--Use Custom font for any paragraph-->
+<div>
+    <p class="custom-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque esse hic iure nisi
+        nostrum
+        placeat possimus voluptatem.</p>
+</div>
+<!--Use CSS3 columns on any paragraph.-->
+<div>
+    <p class="columns">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia est id magna euismod, at sodales ex
+        commodo.
+        Proin gravida velit quis est suscipit, nec faucibus sem commodo. Phasellus hendrerit, nunc id pulvinar
+        scelerisque,
+        justo nulla aliquam ante, nec tincidunt orci ipsum at eros.
+    </p>
+</div>
+<!--Make a div and write your name on it, and make it appears vertical on the page and with the page height (use transformation).-->
+<div class="vertical">
+    <p>ITI Summer Training</p>
+</div>
+<!--Use transition on an image on the page, that make it rotates and its width and height increase on hover.-->
+<div>
+    <img class="ball" src="ball.png" alt="">
+</div>
+<!--Use animation using keyframe on another image, to make it rotates around its center, and moves from left to right, while its width and height increases.-->
+<div>
+    <img class="earth" src="earth.png" alt="">
+</div>
+<!--Use the given tiger Image, and make it starts with left 0, and looks at left corner, and on hover on it, rotates to right (looks at right corner), and moves to right (Use CSS only [transform and transitions]).-->
+<div>
+    <img class="tiger-image" src="tiger.gif" alt="">
+</div>
+<!--Redo the previous assignment, and make the tiger when arrives to the right corner, reverse the animation, and so on (Use animation instead of transform).-->
+<div>
+    <img class="tiger-image2" src="tiger.gif" alt="">
+</div>
+</body>
+</html>
