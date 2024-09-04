@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task6</title>
+</head>
+<body>
+<ul id="tip"></ul>
+<button id="generateTipsBtn">Generate Tips</button>
+<button id="showTipBtn">Show Tip</button>
+<script>
+    function* generator() {
+        const tips = [
+            "tip1",
+            "tip2",
+            "tip3",
+            "tip4",
+            "tip5",
+            "tip6",
+            "tip7",
+            "tip8",
+            "tip9",
+            "tip10",
+        ]
+        for (let i = 0; i < tips.length; i++) {
+            yield tips[i]
+        }
+    }
+
+
+    let list_tip = document.getElementById("tip")
+    let generateTipsBtn = document.getElementById("generateTipsBtn")
+    let showTipBtn = document.getElementById("showTipBtn")
+    tipsGenerator = generator()
+    generateTipsBtn.addEventListener("click", () => {
+        for (let tip of tipsGenerator) {
+            let li = document.createElement("li")
+            li.textContent = tip;
+            list_tip.append(li)
+        }
+    });
+    showTipBtn.addEventListener("click", () => {
+        const intervalId = setInterval(() => {
+            const nextTip = tipsGenerator.next();
+            if (nextTip.done) {
+                clearInterval(intervalId);
+                return;
+            }
+            let li = document.createElement("li");
+            li.textContent = nextTip.value;
+            list_tip.append(li);
+        }, 3000);
+    });
+</script>
+</body>
+</html>
