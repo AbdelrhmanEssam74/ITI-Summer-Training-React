@@ -27,6 +27,25 @@
 .container-fluid .main-text h1 {
     color: #fff;
 }
-.container-fluid .main-text p{
+
+.container-fluid .main-text p {
     font-size: 20px;
+}
+
+.about-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    padding: 20px;
+}
+
+.main-title h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow:5px 2px 10px gray;
+}
+
+.about-section .about-text {
+    width: 800px;
 }
