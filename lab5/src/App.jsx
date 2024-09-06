@@ -7,6 +7,7 @@ import Hero from "./Components/Hero-section/Hero.jsx";
 import About from "./Components/about/About.jsx";
 import Skills from "./Components/skills/Skills.jsx";
 import Portfolio from "./Components/portfolio/Portfolio.jsx";
+import Footer from "./Components/footer/Footer.jsx";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <About/>
             <Skills/>
             <Portfolio/>
+            <Footer/>
         </>
     )
 }
