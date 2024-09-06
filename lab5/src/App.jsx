@@ -5,12 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Hero from "./Components/Hero-section/Hero.jsx";
 import About from "./Components/about/About.jsx";
+import Skills from "./Components/skills/Skills.jsx";
 
 function App() {
     return (
         <>
             <Hero/>
             <About/>
+            <Skills/>
         </>
     )
 }
