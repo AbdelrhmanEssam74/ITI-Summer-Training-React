@@ -6,6 +6,7 @@ import './App.css'
 import Hero from "./Components/Hero-section/Hero.jsx";
 import About from "./Components/about/About.jsx";
 import Skills from "./Components/skills/Skills.jsx";
+import Portfolio from "./Components/portfolio/Portfolio.jsx";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Hero/>
             <About/>
             <Skills/>
+            <Portfolio/>
         </>
     )
 }
