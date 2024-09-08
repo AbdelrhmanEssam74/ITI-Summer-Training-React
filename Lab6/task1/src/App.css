@@ -1,0 +1,29 @@
+* {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-form button {
+    margin-top: 20px;
+    width: 100%;
+}
+.login-form label{
+    font-weight: bold;
+}
+.show-pass{
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+}
